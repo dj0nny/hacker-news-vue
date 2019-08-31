@@ -1,29 +1,36 @@
-# hacker-news-vue
+# hacker-news-vue 👋
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+[![Documentation](https://img.shields.io/badge/documentation-yes-brightgreen.svg)](https://github.com/dj0nny/hacker-news-vue#readme)
 
-## Project setup
-```
-yarn install
-```
+> Hacker news clone built with Vue.js
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+### 🏠 [Homepage](https://github.com/dj0nny/hacker-news-vue#readme)
 
-### Compiles and minifies for production
-```
-yarn run build
+## Install
+
+```sh
+npm install
 ```
 
-### Run your tests
-```
-yarn run test
+## Usage
+
+```sh
+npm run serve
 ```
 
-### Lints and fixes files
-```
-yarn run lint
-```
+## Author
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+👤 **Francesco Giambruno**
+
+* Twitter: [@Dj0nny96](https://twitter.com/Dj0nny96)
+* Github: [@dj0nny](https://github.com/dj0nny)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+Feel free to check [issues page](https://github.com/dj0nny/hacker-news-vue/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
