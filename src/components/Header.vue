@@ -66,4 +66,8 @@ ul#menu li.item:last-child a {
   margin-right: 0;
 }
 
+.header a.router-link-exact-active.router-link-active {
+  color: #fff !important;
+}
+
 </style>
