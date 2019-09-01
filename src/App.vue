@@ -25,5 +25,6 @@ export default {
   background-color: rgb(246, 246, 239);
   width: 85%;
   margin: auto;
+  counter-reset: news;
 }
 </style>
