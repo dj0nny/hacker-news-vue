@@ -23,6 +23,6 @@ export default {
   },
   async created() {
     await this.FETCH_NEWS();
-  }
+  },
 };
 </script>
