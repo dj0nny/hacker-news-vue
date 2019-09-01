@@ -4,7 +4,7 @@
 
 > Hacker news clone built with Vue.js
 
-## Getting started
+## :rocket: Getting started
 
 ### Download
 
