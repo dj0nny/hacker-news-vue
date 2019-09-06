@@ -12,9 +12,9 @@
 export default {
   name: 'Comment',
   props: [
-    'data'
-  ]
-}
+    'data',
+  ],
+};
 </script>
 
 <style scoped>

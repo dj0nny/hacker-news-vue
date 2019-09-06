@@ -36,6 +36,6 @@ export default {
   },
   async created() {
     await this.FETCH_NEWS_DETAIL(this.$route.params.id);
-  }
+  },
 };
 </script>
