@@ -55,7 +55,7 @@ yarn lint
 - [x] Clean up the folder, set up the store
 - [x] Fetch the **news** from the API and create the components
 - [x] Add pagination
-- [ ] Fetch the **news comments** from the API and create the components
+- [x] Fetch the **news comments** from the API and create the components
 - [ ] Create the routes for the pages
 - [ ] Fetching from API and creating components for:
   - [ ] newest
