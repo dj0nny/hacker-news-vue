@@ -12,6 +12,7 @@ export default new Vuex.Store({
   state: {
     news: [],
     newsDetail: [],
+    newest: [],
     isLoading: false,
   },
   mutations: {
@@ -19,10 +20,10 @@ export default new Vuex.Store({
       state.isLoading = status;
     },
     [types.SET_NEWS](state, newsList) {
-      const uniqueItems = {};
+      const uniqueNewsItems = {};
       state.news = state.news.concat(newsList).filter((item) => {
-        if (!uniqueItems[item.id]) {
-          uniqueItems[item.id] = true;
+        if (!uniqueNewsItems[item.id]) {
+          uniqueNewsItems[item.id] = true;
           return true;
         }
         return false;
@@ -30,6 +31,16 @@ export default new Vuex.Store({
     },
     [types.SET_NEWS_DETAIL](state, details) {
       state.newsDetail = details;
+    },
+    [types.SET_NEWEST](state, newestList) {
+      const uniqueNewestItems = {};
+      state.newest = state.newest.concat(newestList).filter((item) => {
+        if (!uniqueNewestItems[item.id]) {
+          uniqueNewestItems[item.id] = true;
+          return true;
+        }
+        return false;
+      });
     },
   },
   actions: {
@@ -43,6 +54,12 @@ export default new Vuex.Store({
       commit(types.IS_LOADING, true);
       const res = await axios.get(`${BASE_URL}/item/${newsId}`);
       commit(types.SET_NEWS_DETAIL, res.data);
+      commit(types.IS_LOADING, false);
+    },
+    async [types.FETCH_NEWEST]({ commit }, page) {
+      commit(types.IS_LOADING, true);
+      const res = await axios.get(`${BASE_URL}/newest?page=${page}`);
+      commit(types.SET_NEWEST, res.data);
       commit(types.IS_LOADING, false);
     },
   },
