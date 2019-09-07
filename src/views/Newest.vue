@@ -29,7 +29,7 @@ export default {
   watch: {
     page(value) {
       this.FETCH_NEWEST(value);
-    }
+    },
   },
   methods: {
     ...mapActions([
@@ -37,10 +37,10 @@ export default {
     ]),
     more() {
       this.page += 1;
-    }
+    },
   },
   async created() {
     await this.FETCH_NEWEST(this.page);
-  }
+  },
 };
 </script>
