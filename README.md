@@ -58,7 +58,7 @@ yarn lint
 - [x] Fetch the **news comments** from the API and create the components
 - [x] Create the routes for the pages
 - [ ] Fetching from API and creating components for:
-  - [ ] newest
+  - [x] newest
   - [ ] ask
   - [ ] show
   - [ ] jobs
