@@ -57,11 +57,11 @@ yarn lint
 - [x] Add pagination
 - [x] Fetch the **news comments** from the API and create the components
 - [x] Create the routes for the pages
-- [ ] Fetching from API and creating components for:
+- [x] Fetching from API and creating components for:
   - [x] newest
-  - [ ] ask
-  - [ ] show
-  - [ ] jobs
+  - [x] ask
+  - [x] show
+  - [x] jobs
 - [ ] Deploy on [Netlify](https://netlify.com)
 
 ## Author
