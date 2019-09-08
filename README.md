@@ -76,7 +76,7 @@ A deployed version is available at this URL: https://hacker-news-vue.netlify.com
   - [x] ask
   - [x] show
   - [x] jobs
-- [ ] Deploy on [Netlify](https://netlify.com)
+- [x] Deploy on [Netlify](https://netlify.com)
 
 ## Author
 
