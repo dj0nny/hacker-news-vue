@@ -13,6 +13,9 @@ export default new Vuex.Store({
     news: [],
     newsDetail: [],
     newest: [],
+    ask: [],
+    show: [],
+    jobs: [],
     isLoading: false,
   },
   mutations: {
@@ -42,6 +45,36 @@ export default new Vuex.Store({
         return false;
       });
     },
+    [types.SET_ASK](state, askList) {
+      const uniqueAskItems = {};
+      state.ask = state.ask.concat(askList).filter((item) => {
+        if (!uniqueAskItems[item.id]) {
+          uniqueAskItems[item.id] = true;
+          return true;
+        }
+        return false;
+      });
+    },
+    [types.SET_SHOW](state, showList) {
+      const uniqueShowItems = {};
+      state.show = state.show.concat(showList).filter((item) => {
+        if (!uniqueShowItems[item.id]) {
+          uniqueShowItems[item.id] = true;
+          return true;
+        }
+        return false;
+      });
+    },
+    [types.SET_JOBS](state, jobsList) {
+      const uniqueJobsItems = {};
+      state.jobs = state.jobs.concat(jobsList).filter((item) => {
+        if (!uniqueJobsItems[item.id]) {
+          uniqueJobsItems[item.id] = true;
+          return true;
+        }
+        return false;
+      });
+    },
   },
   actions: {
     async [types.FETCH_NEWS]({ commit }, page) {
@@ -60,6 +93,24 @@ export default new Vuex.Store({
       commit(types.IS_LOADING, true);
       const res = await axios.get(`${BASE_URL}/newest?page=${page}`);
       commit(types.SET_NEWEST, res.data);
+      commit(types.IS_LOADING, false);
+    },
+    async [types.FETCH_ASK]({ commit }, page) {
+      commit(types.IS_LOADING, true);
+      const res = await axios.get(`${BASE_URL}/ask?page=${page}`);
+      commit(types.SET_ASK, res.data);
+      commit(types.IS_LOADING, false);
+    },
+    async [types.FETCH_SHOW]({ commit }, page) {
+      commit(types.IS_LOADING, true);
+      const res = await axios.get(`${BASE_URL}/show?page=${page}`);
+      commit(types.SET_SHOW, res.data);
+      commit(types.IS_LOADING, false);
+    },
+    async [types.FETCH_JOBS]({ commit }, page) {
+      commit(types.IS_LOADING, true);
+      const res = await axios.get(`${BASE_URL}/jobs?page=${page}`);
+      commit(types.SET_JOBS, res.data);
       commit(types.IS_LOADING, false);
     },
   },
